@@ -30,9 +30,11 @@ const PARTS = [
 ];
 
 const MASTERS = [
-  { name: "Алексей Смирнов", role: "Мастер-механик", exp: "12 лет опыта", rating: 4.9, reviews: 124, avatar: "👨‍🔧" },
-  { name: "Дмитрий Козлов", role: "Диагност", exp: "8 лет опыта", rating: 4.8, reviews: 89, avatar: "👷" },
-  { name: "Сергей Васильев", role: "Электрик", exp: "10 лет опыта", rating: 4.7, reviews: 67, avatar: "🔧" },
+  { name: "Михаил", role: "Мастер-механик", exp: "Опытный специалист", rating: 4.9, reviews: 87, avatar: "👨‍🔧" },
+  { name: "Альберт", role: "Диагност", exp: "Компьютерная диагностика", rating: 4.8, reviews: 64, avatar: "👷" },
+  { name: "Александр", role: "Мастер по подвеске", exp: "Ходовая часть", rating: 4.9, reviews: 72, avatar: "🔧" },
+  { name: "Александр", role: "Мастер по тормозам", exp: "Тормозные системы", rating: 4.7, reviews: 51, avatar: "⚙️" },
+  { name: "Владимир", role: "Электрик", exp: "Автоэлектрика", rating: 4.8, reviews: 43, avatar: "⚡" },
 ];
 
 const REVIEWS = [
@@ -194,9 +196,9 @@ export default function Index() {
             </nav>
 
             <div className="flex items-center gap-2">
-              <a href="tel:+74951234567" className="hidden md:flex items-center gap-1.5 text-sm font-medium text-[#1e40af] hover:text-[#1e3a8a] transition-colors">
+              <a href="tel:+79180416015" className="hidden md:flex items-center gap-1.5 text-sm font-medium text-[#1e40af] hover:text-[#1e3a8a] transition-colors">
                 <Icon name="Phone" size={15} />
-                +7 (495) 123-45-67
+                +7 (918) 041-60-15
               </a>
               <button onClick={() => setCartOpen(!cartOpen)} className="relative p-2 rounded hover:bg-gray-100 transition-colors">
                 <Icon name="ShoppingCart" size={20} className="text-gray-600" />
@@ -221,8 +223,8 @@ export default function Index() {
                   {link.label}
                 </button>
               ))}
-              <a href="tel:+74951234567" className="flex items-center gap-2 px-3 py-2.5 text-[#1e40af] font-medium text-sm">
-                <Icon name="Phone" size={15} /> +7 (495) 123-45-67
+              <a href="tel:+79180416015" className="flex items-center gap-2 px-3 py-2.5 text-[#1e40af] font-medium text-sm">
+                <Icon name="Phone" size={15} /> +7 (918) 041-60-15
               </a>
             </div>
           </div>
@@ -315,7 +317,7 @@ export default function Index() {
               лучшего
             </h1>
             <p className="text-white/75 text-lg md:text-xl mb-10 max-w-xl leading-relaxed animate-fade-in-up delay-200">
-              12 лет опыта, 50+ специалистов, гарантия на все виды работ. Запись онлайн за 2 минуты.
+              10 лет опыта, 5 мастеров своего дела, гарантия на все виды работ. Запись онлайн за 2 минуты.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-300">
               <Button size="lg" onClick={() => scrollTo("booking")}
@@ -332,9 +334,9 @@ export default function Index() {
 
             <div className="flex flex-wrap gap-8 mt-16 animate-fade-in-up delay-400">
               {[
-                { num: "12+", label: "Лет работы" },
-                { num: "15 000+", label: "Довольных клиентов" },
-                { num: "50+", label: "Специалистов" },
+                { num: "10+", label: "Лет работы" },
+                { num: "2 000+", label: "Довольных клиентов" },
+                { num: "5", label: "Специалистов" },
                 { num: "98%", label: "Довольны результатом" },
               ].map(s => (
                 <div key={s.label} className="text-white">
@@ -698,11 +700,8 @@ export default function Index() {
               </div>
               <h3 className="font-montserrat font-bold text-lg text-[#0f172a] mb-3">Телефоны</h3>
               <div className="space-y-2">
-                <a href="tel:+74951234567" className="flex items-center gap-2 text-[#1e40af] hover:text-[#1e3a8a] font-medium transition-colors">
-                  <Icon name="Phone" size={15} /> +7 (495) 123-45-67
-                </a>
-                <a href="tel:+74957654321" className="flex items-center gap-2 text-[#1e40af] hover:text-[#1e3a8a] font-medium transition-colors">
-                  <Icon name="Phone" size={15} /> +7 (495) 765-43-21
+                <a href="tel:+79180416015" className="flex items-center gap-2 text-[#1e40af] hover:text-[#1e3a8a] font-medium transition-colors">
+                  <Icon name="Phone" size={15} /> +7 (918) 041-60-15
                 </a>
                 <p className="text-gray-400 text-sm mt-3">Звонки с 8:00 до 21:00</p>
               </div>
@@ -714,7 +713,7 @@ export default function Index() {
               </div>
               <h3 className="font-montserrat font-bold text-lg text-[#0f172a] mb-3">Мессенджеры</h3>
               <div className="space-y-3">
-                <a href="https://wa.me/74951234567" target="_blank" rel="noreferrer"
+                <a href="https://wa.me/79180416015" target="_blank" rel="noreferrer"
                   className="flex items-center gap-3 py-2 px-3 bg-green-50 border border-green-200 rounded-lg hover:bg-green-100 transition-colors">
                   <span className="text-xl">💬</span>
                   <div>
@@ -738,8 +737,8 @@ export default function Index() {
                 <Icon name="MapPin" size={22} className="text-white" />
               </div>
               <h3 className="font-montserrat font-bold text-lg text-[#0f172a] mb-3">Адрес</h3>
-              <p className="text-gray-800 font-medium mb-1">Москва, ул. Автомобильная, 12</p>
-              <p className="text-gray-400 text-sm mb-4">м. Автозаводская, 5 мин пешком</p>
+              <p className="text-gray-800 font-medium mb-1">г. Анапа, угол Пролетарская, 17 / Шевченко, 269</p>
+              <p className="text-gray-400 text-sm mb-4">Удобная парковка рядом</p>
               <div className="space-y-1 text-sm text-gray-500">
                 <div className="flex items-center gap-2"><Icon name="Clock" size={14} /> Пн–Вс: 08:00–21:00</div>
                 <div className="flex items-center gap-2"><Icon name="Car" size={14} /> Бесплатная парковка</div>
@@ -750,7 +749,7 @@ export default function Index() {
           <div className="rounded-2xl overflow-hidden border border-gray-200 h-64 bg-gray-100 flex items-center justify-center">
             <div className="text-center text-gray-400">
               <Icon name="MapPin" size={40} className="mx-auto mb-2 text-[#1e40af] opacity-40" />
-              <p className="font-medium text-gray-600">Москва, ул. Автомобильная, 12</p>
+              <p className="font-medium text-gray-600">г. Анапа, угол Пролетарская 17 / Шевченко 269</p>
               <p className="text-sm">Карта будет подключена после настройки</p>
             </div>
           </div>
@@ -768,7 +767,7 @@ export default function Index() {
                 </div>
                 <span className="font-montserrat font-extrabold text-lg">АвтоПрофи</span>
               </div>
-              <p className="text-white/50 text-sm leading-relaxed">Профессиональный автосервис с 2012 года. Доверяют более 15 000 клиентов.</p>
+              <p className="text-white/50 text-sm leading-relaxed">Профессиональный автосервис г. Анапа. Более 10 лет опыта. Доверяют более 2 000 клиентов.</p>
             </div>
             <div>
               <h4 className="font-montserrat font-bold mb-3 text-xs uppercase tracking-wider text-white/50">Услуги</h4>
@@ -789,11 +788,11 @@ export default function Index() {
             <div>
               <h4 className="font-montserrat font-bold mb-3 text-xs uppercase tracking-wider text-white/50">Контакты</h4>
               <div className="space-y-2 text-sm text-white/50">
-                <a href="tel:+74951234567" className="flex items-center gap-2 hover:text-white transition-colors">
-                  <Icon name="Phone" size={14} /> +7 (495) 123-45-67
+                <a href="tel:+79180416015" className="flex items-center gap-2 hover:text-white transition-colors">
+                  <Icon name="Phone" size={14} /> +7 (918) 041-60-15
                 </a>
                 <p className="flex items-center gap-2"><Icon name="Clock" size={14} /> Пн–Вс: 08:00–21:00</p>
-                <p className="flex items-center gap-2"><Icon name="MapPin" size={14} /> ул. Автомобильная, 12</p>
+                <p className="flex items-center gap-2"><Icon name="MapPin" size={14} /> г. Анапа, Пролетарская 17</p>
               </div>
             </div>
           </div>
